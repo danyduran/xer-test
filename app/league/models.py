@@ -1,3 +1,4 @@
+from typing import List
 from django.db import models
 from django.db.models import Sum
 
@@ -23,6 +24,14 @@ class Team(AuditModelMixin):
     def goals(self) -> int:
         total_goals = self.players.aggregate(Sum("goals"))
         return total_goals.get("goals__sum", 0)
+    
+    @property
+    def players(self):
+        return self.players.all()
+    
+    @property
+    def player_names(self) -> List[str]:
+        return [player.name for player in self.players.all()]
 
 
 class Player(AuditModelMixin):
