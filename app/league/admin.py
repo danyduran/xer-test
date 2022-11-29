@@ -3,9 +3,9 @@ from league.models import Player, Team
 
 # Register your models here.
 
-class TeamAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'city', 'goals')
 
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "city", "goals")
 
 
 admin.site.register(Team, TeamAdmin)

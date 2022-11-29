@@ -5,8 +5,8 @@ from rest_framework import serializers
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
-        fields = ['id', 'name', 'city', 'goals']
-        read_only_fields = ['goals']
+        fields = ["id", "name", "city", "goals", "created_at", "updated_at"]
+        read_only_fields = ["goals"]
 
 
 class PlayerSerializer(serializers.ModelSerializer):

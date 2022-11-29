@@ -5,10 +5,10 @@ from league import views
 
 
 router = routers.DefaultRouter()
-router.register(r'teams', views.TeamViewSet)
-router.register(r'players', views.PlayerViewSet)
+router.register(r"teams", views.TeamViewSet)
+router.register(r"players", views.PlayerViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('', views.index, name='index'),
+    path("", include(router.urls)),
+    path("", views.index, name="index"),
 ]
