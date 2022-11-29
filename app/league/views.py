@@ -1,10 +1,8 @@
 from django.http import HttpResponse
-
-from league.serializers import TeamSerializer, PlayerSerializer
-from league.models import Team, Player
-from rest_framework import viewsets
-
 from django_filters.rest_framework import DjangoFilterBackend
+from league.models import Player, Team
+from league.serializers import PlayerSerializer, TeamSerializer
+from rest_framework import viewsets
 
 
 def index(request):
