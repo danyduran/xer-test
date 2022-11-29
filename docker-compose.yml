@@ -16,7 +16,7 @@ services:
       - postgres-db
   postgres-db:
     image: postgres
-    volpostgresqlumes:
+    volumes:
       - ./data/postgres-db:/var/lib/postgres/data
     environment:
       - POSTGRES_DB=postgres
